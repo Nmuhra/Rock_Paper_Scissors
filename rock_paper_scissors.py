@@ -1,32 +1,6 @@
 from pickle import TRUE
 import random
-rock = '''
-    _______
----'   ____)
-      (_____)
-      (_____)
-      (____)
----.__(___)
-'''
 
-paper = '''
-    _______
----'   ____)____
-          ______)
-          _______)
-         _______)
----.__________)
-'''
-
-scissors = '''
-    _______
----'   ____)____
-          ______)
-       __________)
-      (____)
----.__(___)
-'''
-images = [rock,paper,scissors]
 def new_func():
     choices = ["rock", "paper", "scissors"]
     return choices
@@ -38,8 +12,8 @@ while True:
     player = None
 
     while player not in choices:
-          player = int(input("0 for rock, 1 for paper, 2 for or scissors?: "))
-    print(images[player])
+          player = input("rock, paper, scissors?: ").lower()
+
     if player == computer:
      print("computer: ",computer)
      print("player: ", player)
